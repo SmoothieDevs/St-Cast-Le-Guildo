@@ -1,0 +1,117 @@
+footer {
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 110px;
+    background-color: $color2;
+    overflow: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .wrapper::before {
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: -17px;
+        width: 356px;
+        height: 770px;
+        background-image: url("/src/images/svg/phareBig.svg");
+    }
+
+    .wrapper::after {
+        content: "";
+        position: absolute;
+        top: -66px;
+        right: -130px;
+        width: 475px;
+        height: 475px;
+        background-image: url("/src/images/svg/Ancre.svg");
+        transform: rotate(20deg);
+    }
+
+    .wrapper-top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        > div {
+            width: 25%;
+            padding: 0 15px;
+            &:nth-child(1) {
+                width: 50%;
+                padding-right: 100px;
+            }
+        }
+    }
+
+    .logo {
+    }
+
+    .description {
+        margin-top: 75px;
+        p {
+            font-family: $font3;
+            color: white;
+            font-weight: 200;
+            font-size: 20px;
+            line-height: 150%;
+            font-style: italic;
+            text-transform: none;
+        }
+    }
+
+    ul {
+        padding-top: 30px;
+    }
+
+    li {
+        color: white;
+        list-style: none;
+        margin-bottom: 15px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 150%;
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+
+    a {
+        cursor: pointer;
+        color: white;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 150%;
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: white;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        font-family: $font2;
+    }
+
+    .wrapper-bottom{
+        padding-top: 50px;
+        width: 100%;
+        p{
+            font-family: $font3;
+            color: white;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 150%;
+            text-transform: uppercase;
+        }
+    }
+}

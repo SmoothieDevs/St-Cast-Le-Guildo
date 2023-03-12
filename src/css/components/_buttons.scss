@@ -1,0 +1,79 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
+    vertical-align: middle;
+    border: 1px solid $color1;
+    border-radius: 500px;
+    cursor: pointer;
+    padding: 20px 60px;
+    width: fit-content;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    color: $color1;
+    pointer-events: all;
+    &:visited,
+    &:focus {
+        color: $color1;
+    }
+
+    &.ghost {
+        color: white;
+        border: 1px solid white;
+
+        &:visited,
+        &:focus {
+            color: white;
+        }
+    }
+
+    &.btn-login {
+        transition: all .5s ease-in-out;
+        border: 1px solid $color2;
+        border-radius: 15px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 300;
+        font-family: $font3;
+        font-size: 20px;
+        background-color: transparent;
+        padding: 15px 30px;
+        color: $color2;
+        &:visited,
+        &:focus {
+            color: $color2;
+        }
+        &:hover{
+            background-color: $color2;
+            color: white;
+        }
+    }
+    &.btn-logout{
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        padding-right: 15px;
+        font-size: 13px;
+        position: relative;
+        font-weight: 500;
+        line-height: 16px;
+        font-style: normal;
+        color: $color2;
+        font-family: $font2;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width:11px;
+            height: 11px;
+            background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.00039 1.60002C1.8943 1.60002 1.79256 1.64217 1.71755 1.71718C1.64253 1.7922 1.60039 1.89394 1.60039 2.00002V9.00002C1.60039 9.10611 1.64253 9.20785 1.71755 9.28287C1.79256 9.35788 1.8943 9.40002 2.00039 9.40002H4.00039C4.33176 9.40002 4.60039 9.66865 4.60039 10C4.60039 10.3314 4.33176 10.6 4.00039 10.6H2.00039C1.57604 10.6 1.16908 10.4315 0.86902 10.1314C0.568962 9.83134 0.400391 9.42437 0.400391 9.00002V2.00002C0.400391 1.57568 0.568962 1.16871 0.86902 0.868654C1.16908 0.568595 1.57604 0.400024 2.00039 0.400024H4.00039C4.33176 0.400024 4.60039 0.668654 4.60039 1.00002C4.60039 1.3314 4.33176 1.60002 4.00039 1.60002H2.00039ZM7.07613 2.57576C7.31044 2.34145 7.69034 2.34145 7.92465 2.57576L10.4247 5.07576C10.659 5.31007 10.659 5.68997 10.4247 5.92429L7.92465 8.42429C7.69034 8.6586 7.31044 8.6586 7.07613 8.42429C6.84181 8.18997 6.84181 7.81007 7.07613 7.57576L8.55186 6.10002H4.00039C3.66902 6.10002 3.40039 5.8314 3.40039 5.50002C3.40039 5.16865 3.66902 4.90002 4.00039 4.90002H8.55186L7.07613 3.42429C6.84181 3.18997 6.84181 2.81007 7.07613 2.57576Z' fill='%23222828'/%3E%3C/svg%3E%0A");
+        }
+    }
+}

@@ -1,0 +1,183 @@
+nav {
+    pointer-events: none;
+    z-index: 60;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+    .nav-bg {
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-color: $color2;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    &.on {
+        pointer-events: all;
+
+        .nav-bg {
+            background-color: $color2;
+            transition: opacity .5s ease-in-out;
+            opacity: 1;
+        }
+
+        ul {
+            a {
+                pointer-events: all;
+            }
+        }
+    }
+
+    .nav-container {
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-wrapper {
+        max-width: 1400px;
+        width: 100%;
+        padding: 0 50px;
+        display: flex;
+    }
+
+    .nav-wrapper-l {
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+
+            div {
+                overflow: hidden;
+                margin-right: 25px;
+
+                span {
+                    display: inline-block;
+                    font-family: $font3;
+                    font-style: italic;
+                    font-weight: 300;
+                    font-size: 25px;
+                    line-height: 150%;
+                    color: white;
+                    transform: translate(0, 100%);
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            transform: translateY(100%);
+            pointer-events: none;
+            font-family: $font1;
+            font-weight: 500;
+            font-size: 80px;
+            line-height: 110%;
+            color: white;
+            opacity: .5;
+            transition: opacity .3s ease-in-out;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        .nav-wrapper {
+            padding: 0 25px;
+        }
+
+        .nav-wrapper-r {
+            display: none;
+        }
+
+        .nav-wrapper-l {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            li {
+                width: fit-content;
+
+                div {
+                    margin-right: 15px;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            a {
+                font-size: 50px;
+            }
+        }
+    }
+
+    @media all and (max-width: 500px) {
+        .nav-wrapper {
+            padding: 0 20px;
+        }
+        ul {
+            li {
+                div {
+                    margin-right: 15px;
+
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            a {
+                font-size: 40px;
+            }
+        }
+    }
+    @media all and (max-width: 360px) {
+        ul {
+            li {
+                div {
+                    margin-right: 15px;
+
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+}

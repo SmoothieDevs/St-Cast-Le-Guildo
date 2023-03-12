@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="{{ asset('images/favicon.ico')}}" type="image/x-icon">
+  <link rel="stylesheet" href="css/loader.css">
+  <title>Accueil | Cézembre Le-Guildo</title>
+  <meta name="description" content="Cézembre Le-Guildo">
+  <meta name="keywords" content="Saint-Cast, mer, appartement, location, réservation, St-Cast-Le-Guildo, Cézembre">
+  <meta name="author" content="William Stephan">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="google" content="nositelinkssearchbox">
+</head>
+
+<body style="position: fixed;" id="body">
+  <div class="loader">
+    <div class="wrapper">
+      <div class="icon"></div>
+      <p>Chargement...</p>
+    </div>
+  </div>
+  <div class="wrapper-fixed">
+
+    <div class="wrapper-infos">
+      <span class="icon"></span>
+      <time class="time"></time>
+      <p class="lieu">Saint-Cast-le-Guildo</p>
+      <p class="temperature"></p>
+    </div>
+
+    <div class="wrapper-home">
+      <h1>
+        <a href="/">
+          <div data-splitting class="sup">Cézembre</div>
+          <div data-splitting class="sub">Le Guildo</div>
+        </a>
+      </h1>
+    </div>
+
+    <div class="wrapper-menu">
+
+    </div>
+  </div>
+  <div class="tl-wrapper">
+    <div class="btn-menu">
+      <div class="menu-text" data-menu="menu" data-close="close"></div>
+      <div class="menu-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-bg"></div>
+    <div class="nav-container">
+      <div class="nav-wrapper">
+        <div class="nav-wrapper-l">
+          <ul>
+            <li>
+              <div class="link-number"><span>01</span></div><a class="accueil" href="#">Accueil</a>
+            </li>
+            <li>
+              <div class="link-number"><span>02</span></div><a class="st-cast" href="#section2">St-Cast</a>
+            </li>
+            <li>
+              <div class="link-number"><span>03</span></div><a class="appartement" href="#section4">Appartement</a>
+            </li>
+            <li>
+              <div class="link-number"><span>04</span></div><a class="contact" href="#section6">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-wrapper-r"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="section-banner" class="hero-banner" data-color="white">
+      <img class="bg-img" src="images/st-cast/st-cast-hero.webp">
+    </section>
+    <section id="section-hero" class="hero-section" data-color="white">
+      <div class="scroll-indicator">
+        <p>scroll</p>
+        <span></span>
+      </div>
+      <div class="gps">
+        <p>48° 37' 59.99 N -2° 16' 0.01 W</p>
+      </div>
+    </section>
+    <section id="section1" class="section1" data-color="black">
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-left">
+            <div class="title">
+              <h2 class="bar">Un appartement au <br>bord de la mer</h2>
+            </div>
+            <div class="description">
+              <p>Envie de partir en vacances au bord de la mer ! Notre appartement de Saint-Cast-Le-Guildo est parfait
+                pour s'évader dans un univers marin ensoleilé</p>
+            </div>
+          </div>
+          <div class="wrapper-right">
+            <figure id="figure-1">
+              <img id="item-1" loading="lazy" class="item" data-transform="translate(0,100px) rotate(3deg)"
+                src="images/st-cast/St-Cast-section1.1.jpg" alt="Image du port">
+              <img id="item-2" loading="lazy" class="item" data-transform="translate(-0%,100px) rotate(-5deg)"
+                src="images/st-cast/St-Cast-section1.3.jpg" alt="La mer">
+              <img id="item-3" loading="lazy" class="item" data-transform="translate(-0%,100px) rotate(1deg)"
+                src="images/st-cast/St-Cast-section1.2.jpg" alt="la Cote">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section2" class="section2" data-color="black">
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-left">
+            <div class="slider">
+              <div class="hidder-l"></div>
+              <div class="hidder-r"></div>
+              <figure>
+                <img src="images/st-cast/slider1.jpg">
+                <img loading="lazy" style="display: none ;" src="images/st-cast/slider2.jpg">
+                <img loading="lazy" style="display: none ;" src="images/st-cast/slider3.jpg">
+                <img loading="lazy" style="display: none ;" src="images/st-cast/slider4.jpg">
+              </figure>
+              <div class="index">
+                <p class="actual"></p>
+                <span></span>
+                <p class="total"></p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-right">
+            <div class="title">
+              <h2 class="bar">Venez découvrir <br>St-Cast Le Guildo</h2>
+            </div>
+            <div class="description">
+              <p>Explorer le merveilleux littoral et les belles <br>campagnes de Saint-Cast Le Guildo.</p>
+            </div>
+            <ul>
+              <li class="plage">
+                <p>7 Magnifiques plages</p>
+              </li>
+              <li class="nautique">
+                <p>Un Centre Nautique</p>
+              </li>
+              <li class="phare">
+                <p>Proche du Cap Fréhel</p>
+              </li>
+              <li class="arbre">
+                <p>Un Acrobranche</p>
+              </li>
+            </ul>
+            <div class="wrapper-btn">
+              <a class="btn" href="https://villedesaintcastleguildo.fr/" target="_blank">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="banner-img" class="section3" data-color="white">
+      <figure>
+        <img width="100%" height="412px" loading="lazy" src="images/st-cast/banner-img.jpg"
+          alt="Image du port de St-Cast-Le-Guildo">
+      </figure>
+      <div class="container">
+        <div class="wrapper">
+          <h3>Le Port</h3>
+        </div>
+      </div>
+    </section>
+    <section id="section4" class="section4" data-color="black">
+      <div class="container">
+        <div class="wrapper-top">
+          <h2>Un Sublime Appartement</h2>
+        </div>
+        <div class="wrapper">
+          <div class="wrapper-left">
+            <figure id="figure-2">
+              <img id="item-4" loading="lazy" class="item" data-transform="translate(0,100px) rotate(2.3deg)"
+                src="images/st-cast/Appartement1.jpg" alt="Image du port">
+              <img id="item-5" loading="lazy" class="item" data-transform="translate(0%,100px) rotate(-9.3deg)"
+                src="images/st-cast/Appartement2.jpg" alt="La mer">
+            </figure>
+          </div>
+          <div class="wrapper-right">
+            <div class="title">
+              <h3 class="bar">Description</h3>
+            </div>
+            <div class="description">
+              <p>Nous vous proposons un duplex T3 à Saint-Cast Le Guildo. Situé à 300 mètres du centre et de la
+                grande plage, dans une ravissante résidence de standing.<br><br>Cet appartement est orienté vers
+                la mer avec un balcon-Terasse ou l’on peut appercevoir la mer au loin, quelle chance !</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="section5" class="section5" data-color="black">
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-left">
+            <div class="title">
+              <h3 class="bar">Caractéristiques</h3>
+            </div>
+            <div class="caracteristique">
+              <ul>
+                <li><span class="wc">Double WC</span></li>
+                <li><span class="frigo">Frigo et Congélateur</span></li>
+                <li><span class="vaisselle">Lave vaisselle</span></li>
+                <li><span class="bouilloire">Bouilloire</span></li>
+              </ul>
+              <ul>
+                <li><span class="linge">Lave linge</span></li>
+                <li><span class="télé">Télévision</span></li>
+                <li><span class="ondes">Micro-ondes</span></li>
+                <li><span class="four">Four</span></li>
+              </ul>
+              <ul>
+                <li><span class="internet">Pas de connexion internet</span></li>
+                <li><span class="balcon">Balcon-Terasse orienté vers la mer</span></li>
+                <li><span class="garage">Garage Privé</span></li>
+                <li><span class="porte">Porte Sécurisé</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper-right">
+            <figure id="figure-3">
+              <img id="item-6" loading="lazy" class="item" data-transform="translate(0,-100px) rotate(-2.8deg)"
+                src="images/st-cast/Appartement3.jpg" alt="Image du port">
+              <img id="item-7" loading="lazy" class="item" data-transform="translate(-0%,-100px) rotate(1deg)"
+                src="images/st-cast/Appartement4.jpg" alt="La mer">
+            </figure>
+          </div>
+        </div>
+    </section>
+    <footer data-color="white">
+      <div class="container-s">
+        <div class="wrapper">
+          <div class="wrapper-top">
+            <div>
+              <div class="logo">
+                <img src="images/svg/footer-logo.svg" alt="Logo d'une bouée de bateau avec Cézembre Le Guildo à coté">
+              </div>
+              <div class="description">
+                <p>Un petit site de réservation pour notre appartement de Saint-Cast-Le-Guildo</p>
+              </div>
+            </div>
+            <div>
+              <p>Contact</p>
+              <ul>
+                <li>Par Adresses E-mail</li>
+                <li><a>Nous contacter</a></li>
+              </ul>
+            </div>
+            <div>
+              <p>Explorer</p>
+              <ul>
+                <li><a>Accueil</a></li>
+                <li><a>Saint-Cast</a></li>
+                <li><a>L'appartement</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper-bottom">
+            <p>© 2023 William Stephan Cézembre Le Guildo</p>
+          </div>
+        </div>
+    </footer>
+  </main>
+</body>
+
+</html>

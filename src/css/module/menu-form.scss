@@ -1,0 +1,743 @@
+.menu-form {
+    position: fixed;
+    z-index: 50;
+    bottom: 3.5rem;
+    left: 6.5rem;
+    right: 6.5rem;
+    background-color: white;
+    transform: scaleX(0);
+    border-radius: 20px;
+    padding: 12px 20px;
+    min-height: 64px;
+
+    form {
+        opacity: 0;
+        display: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .wrapper-input {
+        display: flex;
+        width: max-content;
+    }
+
+    label {
+        font-weight: 300;
+        font-size: 1.1rem;
+        line-height: 150%;
+        color: $color2;
+        opacity: 1;
+        font-family: $font2;
+    }
+
+    input {
+        appearance: none;
+        border: none;
+        outline: none;
+        font-weight: 300;
+        font-size: 1.1rem;
+        line-height: 150%;
+        color: $color2;
+        font-family: $font2;
+
+        &::placeholder {
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 150%;
+            color: $color2;
+            opacity: 1;
+            font-family: $font2;
+        }
+    }
+
+    .submit {
+        padding-left: 15px;
+        border-left: 1px solid $color1;
+    }
+
+    button[type="submit"] {
+
+        width: 40px;
+        position: relative;
+        border: none;
+        appearance: none;
+        outline: 0;
+        box-shadow: 0;
+        height: 40px;
+        background-color: $color1;
+        border-radius: 50%;
+        transition: background-color ease-in-out .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color2;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.4243 0.575731C18.5873 0.738714 18.6425 0.980653 18.5663 1.19821L12.6163 18.1982C12.5351 18.4304 12.3203 18.5895 12.0745 18.5995C11.8287 18.6095 11.6017 18.4685 11.5017 18.2437L8.19547 10.8046L0.756344 7.49828C0.531536 7.39837 0.390498 7.17134 0.400526 6.92554C0.410554 6.67973 0.569617 6.46495 0.801817 6.38368L17.8018 0.43368C18.0194 0.357537 18.2613 0.412749 18.4243 0.575731ZM9.36568 10.4829L11.9837 16.3734L16.5651 3.28341L9.36568 10.4829ZM15.7166 2.43488L2.62667 7.01636L8.51715 9.63435L15.7166 2.43488Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    ///////////////////////// FIRST STEP ////////////////////////
+
+    .first-step {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .fs-left {
+        width: 50%;
+        display: flex;
+        border-right: solid 1px $color1;
+        padding-right: 15px;
+    }
+
+    .fs-right {
+        padding-left: 15px;
+        width: 50%;
+        display: flex;
+    }
+
+    .next {
+        border-left: solid 1px $color1;
+        padding-left: 15px;
+        cursor: pointer;
+
+        button {
+            position: relative;
+            border: none;
+            background: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 13px;
+                height: 21px;
+                background-image: url("data:image/svg+xml,%3Csvg width='13' height='21' viewBox='0 0 13 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.552954 0.632357C0.782895 0.354902 1.1886 0.321164 1.45912 0.557001L12.1734 9.89765C12.3171 10.0229 12.3999 10.2066 12.3999 10.4C12.3999 10.5935 12.3171 10.7771 12.1734 10.9024L1.45912 20.243C1.1886 20.4789 0.782895 20.4451 0.552954 20.1677C0.323013 19.8902 0.355908 19.4741 0.626427 19.2383L10.7644 10.4L0.626427 1.56175C0.355908 1.32592 0.323013 0.909812 0.552954 0.632357Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                transition: background-color ease-in-out .3s;
+                background-color: $color1;
+            }
+
+            &:hover {
+                &::before {
+                    background-color: $color2;
+                }
+            }
+        }
+    }
+
+    .date {
+        width: 100%;
+
+        .icon {
+            position: relative;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 18px;
+                height: 20px;
+                background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.44435 0.399994C5.77572 0.399994 6.04435 0.668623 6.04435 0.999994V2.19999H11.9555V0.999994C11.9555 0.668623 12.2241 0.399994 12.5555 0.399994C12.8868 0.399994 13.1555 0.668623 13.1555 0.999994V2.19999H15.2221C16.5423 2.19999 17.5999 3.28156 17.5999 4.59999V17.2C17.5999 18.5184 16.5423 19.6 15.2221 19.6H2.77768C1.45746 19.6 0.399902 18.5184 0.399902 17.2V4.59999C0.399902 3.28156 1.45746 2.19999 2.77768 2.19999H4.84435V0.999994C4.84435 0.668623 5.11298 0.399994 5.44435 0.399994ZM4.84435 3.39999H2.77768C2.13422 3.39999 1.5999 3.9302 1.5999 4.59999V7.59999H16.3999V4.59999C16.3999 3.9302 15.8656 3.39999 15.2221 3.39999H13.1555V4.59999C13.1555 4.93136 12.8868 5.19999 12.5555 5.19999C12.2241 5.19999 11.9555 4.93136 11.9555 4.59999V3.39999H6.04435V4.59999C6.04435 4.93136 5.77572 5.19999 5.44435 5.19999C5.11298 5.19999 4.84435 4.93136 4.84435 4.59999V3.39999ZM16.3999 8.79999H1.5999V17.2C1.5999 17.8698 2.13422 18.4 2.77768 18.4H15.2221C15.8656 18.4 16.3999 17.8698 16.3999 17.2V8.79999Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color1;
+            }
+        }
+    }
+
+    #arrive {
+        width: 115px;
+        background-image: none !important;
+        text-align: right;
+    }
+
+    #depart {
+        width: 120px;
+        background-image: none !important;
+
+    }
+
+    .arrow {
+        width: 17px;
+        position: relative;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 11px;
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.2068 0.569828C11.4444 0.338836 11.8242 0.344187 12.0552 0.581778L16.4302 5.08178C16.6566 5.31465 16.6566 5.6854 16.4302 5.91827L12.0552 10.4183C11.8242 10.6559 11.4444 10.6612 11.2068 10.4302C10.9692 10.1992 10.9638 9.81937 11.1948 9.58178L14.5799 6.10002H1.00002C0.668654 6.10002 0.400024 5.8314 0.400024 5.50002C0.400024 5.16865 0.668654 4.90002 1.00002 4.90002H14.5799L11.1948 1.41827C10.9638 1.18068 10.9692 0.800819 11.2068 0.569828Z' fill='%23222828'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    #personne {
+        width: 50px;
+        background-image: none !important;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .personnes {
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .buttons {
+            display: flex;
+            margin-left: 2.5rem;
+            flex-direction: row;
+        }
+
+        label {
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .icon {
+            min-width: 40px;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 18px;
+                height: 20px;
+                background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.4 19C16.4 19.3314 16.6686 19.6 17 19.6C17.3314 19.6 17.6 19.3314 17.6 19H16.4ZM13 13V12.4V13ZM5 13V12.4V13ZM1 17H0.4H1ZM0.4 19C0.4 19.3314 0.668629 19.6 1 19.6C1.33137 19.6 1.6 19.3314 1.6 19H0.4ZM17.6 19V17H16.4V19H17.6ZM17.6 17C17.6 15.78 17.1154 14.61 16.2527 13.7473L15.4042 14.5958C16.0418 15.2335 16.4 16.0983 16.4 17H17.6ZM16.2527 13.7473C15.39 12.8846 14.22 12.4 13 12.4V13.6C13.9017 13.6 14.7665 13.9582 15.4042 14.5958L16.2527 13.7473ZM13 12.4H5V13.6H13V12.4ZM5 12.4C3.78 12.4 2.60998 12.8846 1.74731 13.7473L2.59584 14.5958C3.23346 13.9582 4.09826 13.6 5 13.6V12.4ZM1.74731 13.7473C0.884641 14.61 0.4 15.78 0.4 17H1.6C1.6 16.0983 1.95821 15.2335 2.59584 14.5958L1.74731 13.7473ZM0.4 17V19H1.6V17H0.4ZM12.4 5C12.4 6.87777 10.8778 8.4 9 8.4V9.6C11.5405 9.6 13.6 7.54051 13.6 5H12.4ZM9 8.4C7.12223 8.4 5.6 6.87777 5.6 5H4.4C4.4 7.54051 6.45949 9.6 9 9.6V8.4ZM5.6 5C5.6 3.12223 7.12223 1.6 9 1.6V0.4C6.45949 0.4 4.4 2.45949 4.4 5H5.6ZM9 1.6C10.8778 1.6 12.4 3.12223 12.4 5H13.6C13.6 2.45949 11.5405 0.4 9 0.4V1.6Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color1;
+            }
+        }
+    }
+
+    .plus {
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.9999 0.399994C8.33127 0.399994 8.5999 0.668623 8.5999 0.999994V7.39999H14.9999C15.3313 7.39999 15.5999 7.66862 15.5999 7.99999C15.5999 8.33136 15.3313 8.59999 14.9999 8.59999H8.5999V15C8.5999 15.3314 8.33127 15.6 7.9999 15.6C7.66853 15.6 7.3999 15.3314 7.3999 15V8.59999H0.999902C0.668532 8.59999 0.399902 8.33136 0.399902 7.99999C0.399902 7.66862 0.668532 7.39999 0.999902 7.39999H7.3999V0.999994C7.3999 0.668623 7.66853 0.399994 7.9999 0.399994Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $color1;
+            transition: background-color ease-in-out .3s;
+        }
+
+        &:hover {
+            &::before {
+                background-color: $color2;
+            }
+        }
+    }
+
+    .less {
+        height: 40px;
+        width: 40px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 4px;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='4' viewBox='0 0 16 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.399902 0.999994C0.399902 0.668623 0.668532 0.399994 0.999902 0.399994H14.9999C15.3313 0.399994 15.5999 0.668623 15.5999 0.999994C15.5999 1.33136 15.3313 1.59999 14.9999 1.59999H0.999902C0.668532 1.59999 0.399902 1.33136 0.399902 0.999994Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $color1;
+            transition: background-color ease-in-out .3s;
+        }
+
+        &:hover {
+            &::before {
+                background-color: $color2;
+            }
+        }
+    }
+
+    ///////////////////////// SECOND STEP ////////////////////////
+
+    .second-step {
+        display: none;
+        opacity: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .ss-left {
+        width: calc(100% / 3);
+        width: 33%;
+        display: flex;
+        border-right: solid 1px $color1;
+        padding-right: 15px;
+    }
+
+    .ss-center {
+        width: calc(100% / 3);
+        display: flex;
+        border-right: solid 1px $color1;
+        padding: 0 15px;
+    }
+
+    .ss-right {
+        width: calc(100% / 3);
+        padding-left: 15px;
+        display: flex;
+
+        .back {
+            display: none;
+        }
+    }
+
+    #email,
+    #nom,
+    #prenom {
+        width: 100%;
+    }
+
+    .back {
+        border-right: solid 1px $color1;
+        padding-right: 15px;
+        cursor: pointer;
+
+        button {
+            position: relative;
+            border: none;
+            background: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform-origin: center;
+                transform: translate(-50%, -50%) rotate(180deg);
+                width: 13px;
+                height: 21px;
+                background-image: url("data:image/svg+xml,%3Csvg width='13' height='21' viewBox='0 0 13 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.552954 0.632357C0.782895 0.354902 1.1886 0.321164 1.45912 0.557001L12.1734 9.89765C12.3171 10.0229 12.3999 10.2066 12.3999 10.4C12.3999 10.5935 12.3171 10.7771 12.1734 10.9024L1.45912 20.243C1.1886 20.4789 0.782895 20.4451 0.552954 20.1677C0.323013 19.8902 0.355908 19.4741 0.626427 19.2383L10.7644 10.4L0.626427 1.56175C0.355908 1.32592 0.323013 0.909812 0.552954 0.632357Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                transition: background-color ease-in-out .3s;
+                background-color: $color1;
+            }
+
+            &:hover {
+                &::before {
+                    background-color: $color2;
+                }
+            }
+        }
+    }
+
+    .email {
+        padding-left: 15px;
+
+        div.icon {
+            position: relative;
+            width: 40px;
+            min-width: 40px;
+            max-width: 40px;
+            margin-right: 10px;
+            height: 40px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.63957 2.45956L9.9999 8.14923L18.3602 2.45956C18.226 1.97565 17.7654 1.59999 17.1999 1.59999H2.7999C2.2344 1.59999 1.77382 1.97565 1.63957 2.45956ZM18.3999 3.88409L10.3375 9.37102C10.1338 9.50965 9.86603 9.50965 9.66233 9.37102L1.5999 3.88409V13.25C1.5999 13.8653 2.12523 14.4 2.7999 14.4H17.1999C17.8746 14.4 18.3999 13.8653 18.3999 13.25V3.88409ZM0.399902 2.74999C0.399902 1.4403 1.49458 0.399994 2.7999 0.399994H17.1999C18.5052 0.399994 19.5999 1.4403 19.5999 2.74999V13.25C19.5999 14.5597 18.5052 15.6 17.1999 15.6H2.7999C1.49458 15.6 0.399902 14.5597 0.399902 13.25V2.74999Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color1;
+            }
+        }
+    }
+
+    .prenom {
+        div.icon {
+            position: relative;
+            width: 40px;
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 19px;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 1.59999C15.5966 1.59999 15.2096 1.76028 14.9243 2.04558L2.54182 14.4281L1.82466 17.2967L4.69329 16.5795L17.0758 4.19705C17.217 4.05578 17.3291 3.88807 17.4056 3.7035C17.482 3.51892 17.5214 3.3211 17.5214 3.12131C17.5214 2.92153 17.482 2.72371 17.4056 2.53913C17.3291 2.35456 17.217 2.18685 17.0758 2.04558C16.9345 1.90431 16.7668 1.79225 16.5822 1.7158C16.3976 1.63934 16.1998 1.59999 16 1.59999ZM14.0758 1.19705C14.5861 0.686704 15.2783 0.399994 16 0.399994C16.3574 0.399994 16.7113 0.470383 17.0414 0.607142C17.3716 0.743901 17.6716 0.944352 17.9243 1.19705C18.177 1.44975 18.3774 1.74974 18.5142 2.07991C18.651 2.41008 18.7214 2.76394 18.7214 3.12131C18.7214 3.47868 18.651 3.83255 18.5142 4.16272C18.3774 4.49288 18.177 4.79288 17.9243 5.04558L5.4243 17.5456C5.34741 17.6225 5.25106 17.677 5.14556 17.7034L1.14556 18.7034C0.941094 18.7545 0.724801 18.6946 0.575773 18.5456C0.426745 18.3966 0.366835 18.1803 0.417952 17.9758L1.41795 13.9758C1.44433 13.8703 1.49888 13.7739 1.57577 13.6971L14.0758 1.19705ZM9.40004 18.1213C9.40004 17.79 9.66867 17.5213 10 17.5213H19C19.3314 17.5213 19.6 17.79 19.6 18.1213C19.6 18.4527 19.3314 18.7213 19 18.7213H10C9.66867 18.7213 9.40004 18.4527 9.40004 18.1213Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color1;
+            }
+        }
+    }
+
+    .nom {
+        width: 100%;
+        padding-right: 15px;
+
+        div.icon {
+            position: relative;
+            width: 40px;
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 19px;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 1.59999C15.5966 1.59999 15.2096 1.76028 14.9243 2.04558L2.54182 14.4281L1.82466 17.2967L4.69329 16.5795L17.0758 4.19705C17.217 4.05578 17.3291 3.88807 17.4056 3.7035C17.482 3.51892 17.5214 3.3211 17.5214 3.12131C17.5214 2.92153 17.482 2.72371 17.4056 2.53913C17.3291 2.35456 17.217 2.18685 17.0758 2.04558C16.9345 1.90431 16.7668 1.79225 16.5822 1.7158C16.3976 1.63934 16.1998 1.59999 16 1.59999ZM14.0758 1.19705C14.5861 0.686704 15.2783 0.399994 16 0.399994C16.3574 0.399994 16.7113 0.470383 17.0414 0.607142C17.3716 0.743901 17.6716 0.944352 17.9243 1.19705C18.177 1.44975 18.3774 1.74974 18.5142 2.07991C18.651 2.41008 18.7214 2.76394 18.7214 3.12131C18.7214 3.47868 18.651 3.83255 18.5142 4.16272C18.3774 4.49288 18.177 4.79288 17.9243 5.04558L5.4243 17.5456C5.34741 17.6225 5.25106 17.677 5.14556 17.7034L1.14556 18.7034C0.941094 18.7545 0.724801 18.6946 0.575773 18.5456C0.426745 18.3966 0.366835 18.1803 0.417952 17.9758L1.41795 13.9758C1.44433 13.8703 1.49888 13.7739 1.57577 13.6971L14.0758 1.19705ZM9.40004 18.1213C9.40004 17.79 9.66867 17.5213 10 17.5213H19C19.3314 17.5213 19.6 17.79 19.6 18.1213C19.6 18.4527 19.3314 18.7213 19 18.7213H10C9.66867 18.7213 9.40004 18.4527 9.40004 18.1213Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $color1;
+            }
+        }
+    }
+
+    @media all and (max-width:576px) {
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        padding: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        form {}
+
+        .first-step {
+            flex-wrap: wrap;
+
+        }
+
+        .fs-left {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
+            border-right: none;
+        }
+
+        .fs-right {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+
+        }
+
+        .personnes {
+            padding: 0;
+            width: 100%;
+
+            .buttons {
+                margin-left: auto;
+            }
+        }
+
+        .next {
+            margin-top: 15px;
+            border-left: 0;
+            padding: 0;
+            width: 100%;
+
+            button {
+                background-color: $color1;
+                width: 100%;
+                border-radius: 50px;
+                transition: background-color 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $color2;
+
+                    &::after {
+                        right: 7px;
+                    }
+                }
+
+                &::before {
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    height: auto;
+                    width: 100%;
+                    transform: translate(-50%, -50%);
+                    content: "Suivant";
+                    text-transform: capitalize;
+                    color: white;
+                    font-size: 1.1rem;
+                    line-height: 150%;
+                    font-family: $font2;
+                    font-weight: 300;
+                }
+
+                &::after {
+                    right: 10px;
+                    left: unset;
+                    transition: right 0.3s ease-in-out;
+                }
+            }
+        }
+
+        .ss-left {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
+            border-right: none;
+
+            .back {
+                display: none;
+            }
+        }
+
+        .ss-right {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+
+            .back {
+                width: 50%;
+                margin: 0;
+                display: flex;
+                border-right: none;
+                padding-right: 7px;
+                button {
+                    background-color: $color1;
+                    border-radius: 50px;
+                    transition: background-color 0.3s ease-in-out;
+                    width: 100%;
+
+                    &::before {
+                        background-color: transparent;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        height: auto;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
+                        content: "Retour";
+                        text-transform: capitalize;
+                        color: white;
+                        font-size: 1.1rem;
+                        line-height: 150%;
+                        font-family: $font2;
+                        font-weight: 300;
+                    }
+
+                    &:hover {
+                        background-color: $color2;
+                    }
+
+                    &::after {
+                        left: 15px;
+                        right: unset;
+                        transition: right 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .submit {
+                margin: 0;
+                border-left: none;
+                width: 50%;
+                padding-left: 7px;
+                button {
+                    background-color: $color1;
+                    border-radius: 50px;
+                    transition: background-color 0.3s ease-in-out;
+                    width: 100%;
+                    &:hover {
+                        background-color: $color2;
+                    }
+                    &::after {
+                        background-color: transparent;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        height: auto;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
+                        content: "Valider";
+                        text-transform: capitalize;
+                        color: white;
+                        font-size: 1.1rem;
+                        line-height: 150%;
+                        font-family: $font2;
+                        font-weight: 300;
+                    }
+                    &::before {
+                        right: 10px;
+                        left: unset;
+                        transition: right 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .ss-center {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
+            border-right: none;
+        }
+
+        .email,
+        .prenom,
+        .nom {
+            padding: 0;
+            width: 100%;
+        }
+
+        .nom {
+            margin-bottom: 15px;
+        }
+    }
+}

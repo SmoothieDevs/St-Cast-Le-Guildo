@@ -1,0 +1,52 @@
+/* 
+Main scss
+*/
+
+//==============================================================================
+// Configuration
+//==============================================================================
+
+@import "base/fonts";
+@import "base/vars"; 
+@import "base/mixins";
+@import "base/print";
+@import "base/reset";
+@import "base/global";
+
+//==============================================================================
+// Components
+//==============================================================================
+
+@import "components/buttons";
+
+//==============================================================================
+// Layout
+//==============================================================================
+
+@import "layout/navigation";
+@import "layout/footer";
+
+//==============================================================================
+// Pages
+//==============================================================================
+
+@import "pages/index";
+@import "pages/login";
+@import "pages/admin-dashboard";
+@import "pages/user-dashboard";
+
+//==============================================================================
+// Modules
+//==============================================================================
+@import "module/navigation";
+@import "module/hero-banner";
+@import "module/hero-section";
+@import "module/menu-form";
+@import "module/section1";
+@import "module/section2";
+@import "module/section3";
+@import "module/section4";
+@import "module/section5";
+@import "module/section6";
+@import "module/footer";
+@import "module/date-selector";

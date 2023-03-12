@@ -1,0 +1,75 @@
+section.section6 {
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 110px;
+    background-color: $color2;
+    overflow: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+        padding-bottom: 80px;
+    }
+
+    .wrapper::before{
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: -17px;
+        width: 356px;
+        height: 770px;
+        background-image: url("/src/images/svg/phareBig.svg");
+    }
+
+    .wrapper::after{
+        content: "";
+        position: absolute;
+        top: -66px;
+        right: -130px;
+        width: 475px;
+        height: 475px;
+        background-image: url("/src/images/svg/Ancre.svg");
+        transform: rotate(20deg);
+    }
+
+    .wrapper-top{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    h3 {
+        color: white;
+        text-align: left;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 110%;
+    }
+
+    .wrapper-left {
+        width: 50%;
+        padding-right: 20px;
+    }
+
+    .wrapper-right {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        padding-left: 20px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .description {
+        max-width: 500px;
+        color: white;
+        font-style: italic;
+    }
+}

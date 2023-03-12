@@ -1,0 +1,53 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    .scroll-indicator {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        cursor: pointer;
+        transform: translateX(-50%);
+        p {
+            color: white;
+            text-transform: lowercase;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 15px;
+            line-height: 150%;
+            font-family: $font3;
+            margin-bottom: 10px;
+        }
+        span {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 1px;
+            background-color: white;
+            height: 25px;
+            transition: height 0.5s ease-in-out;
+        }
+        &:hover {
+            span {
+                height: 50px;
+            }
+        }
+    }
+    .gps {
+        position: absolute;
+        transform:rotate(90deg) translateY(-50%) ;
+        right: -50px;
+        bottom: 50%;
+        p {
+            color: white;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            font-family: $font3;
+        }
+    }
+}

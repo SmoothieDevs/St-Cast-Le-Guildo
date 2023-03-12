@@ -1,0 +1,35 @@
+#date-selector {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 49;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    transition: opacity .5s ease-in-out;
+
+    &.on {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .date-bg {
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-color: $color2;
+    }
+
+    .date-wrapper {
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
